@@ -1,0 +1,29 @@
+{
+  "name": "github-api",
+  "version": "1.0.0",
+  "description": "This application is an exercise in object oriented programing with NodeJs contolling the backend, Bower controlling the front end, and GULP executing tasks and a web server while still utilizing javascript SASS, Bourbon and bootstrap tools.",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Rob King",
+  "license": "ISC",
+  "dependencies": {
+    "prompt": "^1.0.0"
+  },
+  "devDependencies": {
+    "bower-files": "^3.11.3",
+    "browser-sync": "^2.11.1",
+    "browserify": "^13.0.0",
+    "del": "^2.2.0",
+    "gulp": "^3.9.1",
+    "gulp-concat": "^2.6.0",
+    "gulp-jshint": "^2.0.0",
+    "gulp-sass": "^2.2.0",
+    "gulp-sourcemaps": "^1.6.0",
+    "gulp-uglify": "^1.5.3",
+    "gulp-util": "^3.0.7",
+    "jshint": "^2.9.1",
+    "vinyl-source-stream": "^1.1.0"
+  }
+}
