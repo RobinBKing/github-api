@@ -1,11 +1,12 @@
-// var Constructor = require('../js/function-name.js').Constructor;
-//
-// $(document).ready(function() {
-//
-// var newConstructor = new Constructor();
-//
-//
-// });
-
-
 /* Front-end User interface (jquery) code goes in this file */
+var getGHUser = require('../js/github-api.js').getGHUser;
+
+$(document).ready(function() {
+  // $("form").submit(function (event) {
+  $('#submitBtn').on('click', function(e){
+    event.preventDefault();
+    var userName = $('input#userName').val();
+    getGHUser(userName);
+  });
+});
+
