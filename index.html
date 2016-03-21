@@ -9,13 +9,69 @@
     <title></title>
   </head>
   <body>
-    <div class="container">
-      <h1>Find a GIthub User</h1>
-           <input type="text" class="input-sm" id="userName" placeholder="username">
-        <br>
-        <button type="submit" class="btn btn-success" id="submitBtn">Submit</button>
-    </div>
-    <div id="userInfo">
+    <div class="wrapper">
+      <div class="hero">
+        <div class="hero-inner">
+          <a href="" class="hero-logo"><img src="./img/githubwhite.png" alt="Logo Image"></a>
+          <div class="hero-copy">
+            <h1>Github Finder</h1>
+            <p>Enter a Github user name and see their profile and public repositories.</p>	
+          </div>
+        </div>
+      </div>
+      <input type="text" class="input-sm" id="userName" placeholder="username">
+      <button type="submit" class="btn btn-primary" id="submitBtn">Submit</button>
+      <div class="side-image">
+        <div class="images-wrapper"></div>
+          <div class="side-image-content">
+          <h2 id='userName'>
+            <span id='htmlUrl'></span>
+          </h2>
+          <div class="ghContent">
+            <div class="avi" id='avatar'></div>
+            <p>Followers: <span id='followers'></span> - Following: <span id='following'></span><br>Repos: <span id='publicRepos'></span></p>
+            </div>
+            <div id='repoList'>
+            <div class="cards">
+                <div class="card">
+                    <div class="card-image">
+                    <img src="https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/mountains.png" alt="">
+                    </div>
+                    <div class="card-header">
+                    First Card
+                    </div>
+                    <div class="card-copy">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga, officiis sunt neque facilis culpa molestiae necessitatibus delectus veniam provident.</p>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-image">
+                    <img src="https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/mountains-4.png" alt="">
+                    </div>
+                    <div class="card-header">
+                    Another Card
+                    </div>
+                    <div class="card-copy">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga, officiis sunt neque facilis culpa molestiae necessitatibus delectus veniam provident.</p>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-image">
+                        <img src="https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/mountains-3.png" alt="">
+                    </div>
+                    <div class="card-header">
+                    The Last Card
+                    </div>
+                    <div class="card-copy">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                    </div>
+                </div>
+              </div>
+            </div>
+        </div>
+      </div>
     </div>
   </body>
 </html>
