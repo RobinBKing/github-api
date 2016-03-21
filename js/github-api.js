@@ -4,23 +4,41 @@ var apiKey = require('./../.env').apiKey;
 exports.getGHUser = function(userId){  
   var userUri = 'https://api.github.com/users/'+userId+'?access_token=' + apiKey;
   var repoUri = 'https://api.github.com/users/'+userId+'/repos?access_token=' + apiKey;
+  
+  //clear old values
   var apiOutput;
+  var fullName = '';
+  var userLogin = '';
+  var avatarUrl = '';
+  var htmlUrl = '';
+  var location = '';
+  var followers = '';
+  var following = '';
+  var publicRepos = '';
+ 
+  $('#userName').append(fullName);
+  $('#htmlUrl').append('<a href="'+htmlUrl+'" target="_blank">'+userLogin+'</a>');
+  $('#avatar').append('<a href="'+htmlUrl+'" target="_blank"><img src="'+avatarUrl+'" width="80" height="80" alt="'+userLogin+'"></a>');
+  $('#followers').append(followers);
+  $('#following').append(following);
+  $('#publicRepos').append(publicRepos);
+
+  $('#repoList').empty();
   
   $.get(userUri).then(function(response){
     console.log(response);
-    var userName   = response.name;
-    var userLogin   = response.login;
-    var avatarUrl     = response.avatar_url;
-    var htmlUrl = response.html_url;
-    var location   = response.location;
-    var followers = response.followers;
-    var following = response.following;
-    var publicRepos     = response.public_repos;
+    fullName = response.name;
+    userLogin = response.login;
+    avatarUrl = response.avatar_url;
+    htmlUrl = response.html_url;
+    location = response.location;
+    followers = response.followers;
+    following = response.following;
+    publicRepos = response.public_repos;    
+    if(fullName === undefined) { userName = userLogin; }
     
-    if(userName === undefined) { userName = userLogin; }
-    
-    $('#userName').append(userName);
-    $('#htmlUrl').append('<a href="'+htmlUrl+'" target="_blank">'+userLogin+'</a>)';
+    $('#userName').append(fullName);
+    $('#htmlUrl').append('<a href="'+htmlUrl+'" target="_blank">'+userLogin+'</a>');
     $('#avatar').append('<a href="'+htmlUrl+'" target="_blank"><img src="'+avatarUrl+'" width="80" height="80" alt="'+userLogin+'"></a>');
     $('#followers').append(followers);
     $('#following').append(following);

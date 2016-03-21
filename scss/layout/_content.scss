@@ -1,3 +1,19 @@
+p {
+  font-size: 14px;
+
+}
+h3 {
+    font-size: 18px;
+}
+h1 {
+    font-size: 24px;
+}
+
+p, h1, h3 {
+  font-family: 'Poiret One', cursive;
+  text-shadow: .5px .5px $dark-grey;
+  line-height: 1.6em;
+}
 #avatar img {
   width: 100%;
   height: auto;
@@ -8,5 +24,9 @@
 }
 
 #repoList li, #userName {
-  color: $text-color;
+  color: black;
+}
+
+.input {
+  padding: 1em;
 }

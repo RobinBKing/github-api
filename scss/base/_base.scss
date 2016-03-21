@@ -23,7 +23,7 @@ html {
  * Basic styles for links
  */
 a {
-  color: $brand-color;
+  color: $text-color;
   text-decoration: none;
 
   @include on-event {
@@ -31,3 +31,9 @@ a {
     text-decoration: underline;
   }
 }
+
+.wrapper {
+  font-family: 'Poiret One', cursive;    
+}
+
+

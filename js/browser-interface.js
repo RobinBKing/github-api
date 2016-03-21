@@ -3,11 +3,11 @@ var getGHUser = require('../js/github-api.js').getGHUser;
 
 $(document).ready(function() {
   // $("form").submit(function (event) {
-  $('#submitBtn').on('click', function(e){
+  $('#submitBtn').on('click', function(event){
     event.preventDefault();
-    $('.ghContent').show();
+    // $(".ghContent").empty();
     var userName = $('input#userName').val();
     getGHUser(userName);
+    $('.ghContent').show();
   });
 });
-
