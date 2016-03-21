@@ -23,6 +23,7 @@ exports.getGHUser = function(userId){
   $('#following').append(following);
   $('#publicRepos').append(publicRepos);
 
+  $('#avatar').empty();
   $('#repoList').empty();
   
   $.get(userUri).then(function(response){
