@@ -3,7 +3,7 @@
   <head>
     <link rel="stylesheet" href="build/css/vendor.css">
     <link rel="stylesheet" href="build/css/styles.css">
-        <link href='https://fonts.googleapis.com/css?family=Poiret+One' rel='stylesheet' type='text/css'>    
+    <link href='https://fonts.googleapis.com/css?family=Poiret+One' rel='stylesheet' type='text/css'>
     <script src="build/js/vendor.min.js"></script>
     <script type="text/javascript" src="build/js/app.js"></script>
     <meta charset="utf-8">
@@ -16,7 +16,7 @@
           <a href="" class="hero-logo"><img src="./img/githubwhite.png" alt="Logo Image"></a>
           <div class="hero-copy">
             <h1>Github Finder</h1>
-            <p>Enter a Github user name and see their profile and public repositories.</p>	
+            <p>Enter a Github user name and see their profile and public repositories.</p>
           </div>
         </div>
       </div>
@@ -26,22 +26,17 @@
             <input type="text" class="input-sm" id="userName" placeholder="username">
             <button type="submit" class="btn btn-primary" id="submitBtn">Submit</button>
           </div>
-          <div class="ghContent" id='avatar'></div>           
+          <div class='ghContent ghHide' id='avatar'></div>
         </div>
-        <div class='col-sm-4 ghContent'>
+        <div class='col-sm-4 ghHide'>
           <img src="./img/githubsrc.png" alt="">
-          <h1 id='fullName'></h1>
-          <h3><span id='htmlUrl'></span></h3>
-          <div >
-            <p>Followers: <span id='followers'></span></p>
-            <p>Following: <span id='following'></span></p>
-            <p>Repositories: <span id='publicRepos'></span></p>
-          </div>          
+          <div id="userInfo" class="ghContent">
+          </div>
         </div>
-        <div class='col-sm-4 ghContent'>
+        <div class='col-sm-4 ghHide'>
          <img src="./img/githubsrc.png" alt="">
           <h1>Repository List:</h1>
-          <div id='repoList'>
+          <div id='repoList' class='ghContent'>
           </div>
         </div>
       </div>

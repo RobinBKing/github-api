@@ -5,9 +5,9 @@ $(document).ready(function() {
   // $("form").submit(function (event) {
   $('#submitBtn').on('click', function(event){
     event.preventDefault();
-    // $(".ghContent").empty();
+    $(".ghContent").empty();
     var userName = $('input#userName').val();
     getGHUser(userName);
-    $('.ghContent').show();
+    $('.ghHide').show();
   });
 });
